@@ -1,0 +1,6 @@
+framework module Pods_ImageCity {
+  umbrella header "Pods-ImageCity-umbrella.h"
+
+  export *
+  module * { export * }
+}
