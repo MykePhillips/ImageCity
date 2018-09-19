@@ -41,5 +41,15 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	<key>NSLocationAlwaysUsageDescription</key>
+	<string>This App requiers your location to pull photos from Flicker.</string>
+	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+	<string>This App requiers your location to pull photos from Flicker.</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>This App requiers your location to pull photos from Flicker.</string>
+	<key>LSApplicationCategoryType</key>
+	<string></string>
+	<key>CFBundleDisplayName</key>
+	<string></string>
 </dict>
 </plist>
