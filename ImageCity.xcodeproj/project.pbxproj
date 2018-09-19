@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		777BE7BDB34EF62BF43959B4 /* Pods_ImageCity.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B6D9ADD38D9C07973D463AD5 /* Pods_ImageCity.framework */; };
+		BE3FB1CD21529F4E000F4ED8 /* DroppablePin.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE3FB1CC21529F4E000F4ED8 /* DroppablePin.swift */; };
 		BEE8DF41214E532F000AC002 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEE8DF40214E532F000AC002 /* AppDelegate.swift */; };
 		BEE8DF43214E532F000AC002 /* MapVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEE8DF42214E532F000AC002 /* MapVC.swift */; };
 		BEE8DF46214E532F000AC002 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BEE8DF44214E532F000AC002 /* Main.storyboard */; };
@@ -18,6 +19,7 @@
 /* Begin PBXFileReference section */
 		8D78666C24DE9A56F3082D0A /* Pods-ImageCity.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ImageCity.release.xcconfig"; path = "Pods/Target Support Files/Pods-ImageCity/Pods-ImageCity.release.xcconfig"; sourceTree = "<group>"; };
 		B6D9ADD38D9C07973D463AD5 /* Pods_ImageCity.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ImageCity.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BE3FB1CC21529F4E000F4ED8 /* DroppablePin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DroppablePin.swift; sourceTree = "<group>"; };
 		BEE8DF3D214E532F000AC002 /* ImageCity.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ImageCity.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BEE8DF40214E532F000AC002 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BEE8DF42214E532F000AC002 /* MapVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapVC.swift; sourceTree = "<group>"; };
@@ -68,6 +70,7 @@
 		BE3FB1C521521E98000F4ED8 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				BE3FB1CC21529F4E000F4ED8 /* DroppablePin.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -236,6 +239,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BEE8DF43214E532F000AC002 /* MapVC.swift in Sources */,
+				BE3FB1CD21529F4E000F4ED8 /* DroppablePin.swift in Sources */,
 				BEE8DF41214E532F000AC002 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
