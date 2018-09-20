@@ -15,6 +15,8 @@ import CoreLocation
 class MapVC: UIViewController, UIGestureRecognizerDelegate {
 
     @IBOutlet weak var mapView: MKMapView!
+    @IBOutlet weak var pullUpView: UIView!
+    @IBOutlet weak var pullupViewHieghtConstraint: NSLayoutConstraint!
 
     var locationManager = CLLocationManager()
     let authorizationStatus = CLLocationManager.authorizationStatus()
@@ -27,8 +29,6 @@ class MapVC: UIViewController, UIGestureRecognizerDelegate {
         configureLocationServices()
         addDoubleTap()
 
-
-
     }
 
     func addDoubleTap() {
@@ -39,6 +39,16 @@ class MapVC: UIViewController, UIGestureRecognizerDelegate {
         mapView.addGestureRecognizer(doubleTap)
 
 
+
+    }
+
+    func annimateViewUp() {
+
+        pullupViewHieghtConstraint.constant = 300
+        UIView.animate(withDuration: 0.3) {
+            self.view.layoutIfNeeded()
+
+        }
 
     }
 
@@ -57,6 +67,23 @@ class MapVC: UIViewController, UIGestureRecognizerDelegate {
 
 extension MapVC: MKMapViewDelegate {
 
+    func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
+
+        if annotation is MKUserLocation {
+  
+            return nil
+        }
+
+        let pinAnnotation = MKPinAnnotationView(annotation: annotation, reuseIdentifier: "droppablePin")
+
+        pinAnnotation.pinTintColor = #colorLiteral(red: 0.2784313725, green: 0.7333333333, blue: 0.7843137255, alpha: 1)
+        pinAnnotation.animatesDrop = true
+
+        return pinAnnotation
+
+
+    }
+
     func centerMapOnUserLocation() {
 
         guard let coordinate = locationManager.location?.coordinate else { return }
@@ -69,6 +96,7 @@ extension MapVC: MKMapViewDelegate {
     @objc func dropPin(sender: UITapGestureRecognizer) {
 
         removePin()
+        annimateViewUp()
 
         //Drop pin on the map.
         let touchPoint = sender.location(in: mapView)
